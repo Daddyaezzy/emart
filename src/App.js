@@ -5,8 +5,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Products from "./component/Products";
 import { useEffect, useState } from "react";
 // import logo from "./images/DA Collections-logos__transparent 3.png";
-import style from "./style/logo.module.css";
+// import style from "./style/logo.module.css";
 import Preloader from "./Preloader/Preloader";
+import Product from "./component/Product";
+import Cart from "./component/Cart";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -28,6 +30,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<Product />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </Router>
       )}

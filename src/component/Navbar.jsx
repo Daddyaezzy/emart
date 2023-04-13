@@ -3,8 +3,10 @@ import { FiLogIn } from "react-icons/fi";
 import { FiUserPlus } from "react-icons/fi";
 import { FaShoppingCart } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const state = useSelector((state) => state.cart.value);
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light py-3 shadow-sm fixed-top">
@@ -57,7 +59,7 @@ const Navbar = () => {
               </NavLink>
               <NavLink to="/cart" className="btn btn-outline-dark ms-2">
                 <FaShoppingCart className="me-1" />
-                Cart(0)
+                Cart({state ? state.length : 0})
               </NavLink>
             </div>
           </div>

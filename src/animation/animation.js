@@ -6,6 +6,10 @@ const tl = gsap.timeline();
 
 // Preloader Animation
 export const preLoaderAnim = () => {
+  // tl.set(".preloader img", {
+
+  // });
+
   tl.fromTo(
     ".preloader img",
     {
@@ -15,9 +19,10 @@ export const preLoaderAnim = () => {
       y: "0%",
     }
   );
-
-  tl.to(".text-container", {
-    css: { display: "block" },
-    y: "0%",
+  tl.from(".preloader .preloader-text", {
+    x: "100%",
+    opacity: 0,
+    // position: "absolute",
+    // top: "55%",
   });
 };

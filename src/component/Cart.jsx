@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { deleteItem, addItem } from "../redux/cart";
-import { NavLink } from "react-router-dom";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart.value);
@@ -58,7 +57,7 @@ const Cart = () => {
                 <th>Product Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th>Total Price</th>
+                <th>Item Total</th>
               </tr>
             </thead>
             <tbody>

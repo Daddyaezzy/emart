@@ -9,6 +9,9 @@ import { useEffect, useState } from "react";
 import Preloader from "./Preloader/Preloader";
 import Product from "./component/Product";
 import Cart from "./component/Cart";
+import AboutUs from "./component/AboutUs";
+import ContactUs from "./component/ContactUs";
+import Footer from "./component/Footer";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -32,7 +35,10 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
           </Routes>
+          <Footer />
         </Router>
       )}
     </>

@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import logo from "../images/DA Collections-logos__transparent 3.png";
 import "./preloader.css";
-import { preLoaderAnim } from "../animation/animation";
 
 const Preloader = () => {
   const logo1 = useRef();

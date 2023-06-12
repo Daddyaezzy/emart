@@ -6,7 +6,7 @@ import { FaStar } from "react-icons/fa";
 import "../App.css";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addItem, deleteItem } from "../redux/cart";
+import { addItem } from "../redux/cart";
 
 const Product = () => {
   const { id } = useParams();
